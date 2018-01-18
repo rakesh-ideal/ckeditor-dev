@@ -40,7 +40,14 @@ The outline is not a part of the element's dimensions, we have to use a border a
 	See https://github.com/ckeditor/ckeditor-dev/pull/1150#discussion_r150415261 for more details.
 	*/
 	float: right;
-	max-width: 25%;
+	max-width: 25%
+}
+
+/*
+Overwrite 25% in classic editor to prevent existing this bug https://bugs.chromium.org/p/chromium/issues/detail?id=803045
+*/
+body.cke_editable .cke_widget_wrapper_easyimage-side {
+	max-width: 25vw;
 }
 
 .easyimage .cke_widget_editable {
